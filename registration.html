@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registrationstyle.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <title>registration</title>
+</head>
+<body>
+        <div class="leftdiv">
+            <div class="bannerbox">
+                <img src="imgs/Smart Home Logo2.jpg" alt="smartHome Logo" class="smarthome">
+                <div class="opacity"><h1>Hello, Friend!</h1>
+                <p class="para">Enter yout Personal details and start journy with us :)</p></div>
+            </div>
+        </div>
+        <div class="rightdiv">
+            <h2>Sing Up</h2>
+            <div class="sinupform">
+            <form action="#" onsubmit="return validation()">
+
+                <p>Fist Name</p>
+                <input type="text" name="First Name" placeholder="Enter First Name" id="fname">
+                <span id="Fname"></span>
+
+                <p>Last Name</p>
+                <input type="text" name="Last" placeholder="Enter Last Name" id="lname">
+                <span id="Lname"></span>
+
+                <p>Email</p>
+                <input type="email" name="Email" placeholder="Enter Email" id="email">
+                <span id="Email"></span>
+
+                <p>Address</p>
+                <input type="text" name="Address" placeholder="Enter address" id="address">
+                <span id="Address"></span>
+
+                <p>CNIC #</p>
+                <input type="text" name="CNIC No" placeholder="Enter CNIC #" id="cnic">
+                <span id="CNIC"></span>
+
+                <p>Password</p>
+                <input type="password" name="Password" placeholder="Enter Password" id="pass">
+                <span id="Password"></span>
+
+                <p>Re-Password</p>
+                <input type="password" name="Re-Enter Password" placeholder="Re-Enter Password" id="conpass">
+                <span id="Re-Password"></span>
+
+                <input type="checkbox" name="checkbox" value="check" id="terms">
+                <span class="terms">I agreed to the <a href="#"><b>Users Terms</b></a></span>
+                <input type="submit" name="submit" value="Sing Up">
+                <a href="#" class="singin"> Sing in</a>
+            </form>
+        </div>
+        </div>
+        <script>
+           function validation(){
+               var FIRSTNAME = document.getElementById('fname').value;
+               var LASTNAME = document.getElementById('lname').value;
+               var EMAIL = document.getElementById('email').value;
+               var ADDRESS = document.getElementById('address').value;
+               var CNIC = document.getElementById('cnic').value;
+               var PASSWORD = document.getElementById('pass').value;
+               var CONPASSWORD = document.getElementById('conpass').value;
+               var TERMS= document.getElementsByName("terms")[0]
+               
+//First Name
+               if(FIRSTNAME == ""){
+                   document.getElementById('Fname').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+               if((FIRSTNAME.length <= 2) || (FIRSTNAME.length > 20 )){
+                document.getElementById('Fname').innerHTML = "**length should be between 2-20 characters";
+                   return false;
+               }
+               if(!isNaN()){
+                document.getElementById('Fname').innerHTML = "**only alphabets are allowed";
+                   return false;
+               }
+//Last Name
+               if(LASTNAME == ""){
+                   document.getElementById('Lname').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+               if((LASTNAME.length <= 2) || (LASTNAME.length > 20)){
+                document.getElementById('Lname').innerHTML = "**length should be between 2-20 characters";
+                   return false;
+               }
+               if(!isNaN()){
+                document.getElementById('Lname').innerHTML = "**only alphabets are allowed";
+                   return false;
+               }
+//Email
+               if(EMAIL == ""){
+                   document.getElementById('Email').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+               if(EMAIL.indexOf('@')<=0){
+                document.getElementById('Email').innerHTML = "**@ at invalid position";
+                   return false;
+               }
+               if((EMAIL.charAt(EMAIL.length-4)!='.') && (EMAIL.charAt(EMAIL.length-3)!='.')){
+                document.getElementById('Email').innerHTML = "**. at invalid position";
+                   return false;   
+               }
+//Address
+               if(ADDRESS == ""){
+                   document.getElementById('Address').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+               if(ADDRESS.length <= 2){
+                document.getElementById('Address').innerHTML = "**enter valid Address";
+                   return false;
+               }
+//CNIC
+               if(CNIC == ""){
+                   document.getElementById('CNIC').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+               if(isNaN(CNIC)){
+                document.getElementById('CNIC').innerHTML = "**just enter Digits";
+                   return false;
+               }
+               if(CNIC.length != 13){
+                document.getElementById('CNIC').innerHTML = "**invalid length";
+                   return false;
+               }
+//password
+               if(PASSWORD == ""){
+                   document.getElementById('Password').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+               if(PASSWORD.length == 7){
+                document.getElementById('Password').innerHTML = "**length must be greater than 7";
+                   return false;
+               }
+               if(PASSWORD !=CONPASSWORD){
+                document.getElementById('Re-Password').innerHTML = "**Passwords are not matching";
+                   return false;
+               }
+ //conPass              
+               if(CONPASSWORD == ""){
+                   document.getElementById('Re-Password').innerHTML = "**Kindly fill this field";
+                   return false;
+               }
+//terms            
+                if (!TERMS.checked)
+                        return "Please accept the Users Terms";	
+                    return false;
+           } 
+            
+        </script>
+       
+</body>
+</html>
