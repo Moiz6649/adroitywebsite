@@ -1,0 +1,155 @@
+*{
+    padding: 0px;
+    margin: 0px; 
+    font-family: sans-serif; 
+}
+.leftdiv{
+    
+    background-image: url(../imgs/r-architecture-ujGLsMmXoBg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    float: left;
+    width: 65%;
+    height: 100%;
+   
+}
+.rightdiv{
+    
+    background-color: #04285b;
+    position: absolute;
+    float: right;
+    width: 35%;
+    height: 100%;
+    right: 0px;
+}
+.bannerbox{
+    width: 500px;
+    height: 320px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px;
+}
+.opacity{
+    width: 420px;
+    height: 320px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.smarthome{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 35%;
+}
+h1{
+    margin: 0px;
+    text-align: center;
+    padding-top: 25%;
+    font-size: 30px;
+    font-style: italic bold ;
+    text-shadow: black;
+}
+.bannerbox .para{
+    font-weight: normal;
+    font-style: oblique;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-shadow: black;
+    font-size: 22px;
+}
+.rightdiv h2{
+    margin-top: 30px;
+    color: #fff;
+    margin-left: 60px;
+    font-size: 30px;
+    font-weight:bold;
+}
+.sinupform{
+    padding-left: 25px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    margin-top: 22px;
+    margin-left: 35px;
+    margin-right: 30px;
+}
+.sinupform p{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    color: #fff;
+    
+}
+.sinupform input{
+    width: 100%;
+    border-bottom: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+.sinupform input[type="email"], input[type="password"], input[type="text"]
+{
+    border: none;
+    border-bottom:  1px solid#fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+.sinupform .terms{
+    font-style: oblique;
+    float: left;
+    padding: 2px;
+    color: #fff;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+.sinupform .terms a{
+    text-decoration: none;
+    color: #fff;
+}
+.sinupform input[type="checkbox"]{
+    float: left;
+    padding-bottom: 5px;
+    clear: both;
+    width: auto;
+    margin-top: 7px;
+}
+.sinupform input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 55%;
+    background: #1e10a5;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.sinupform input[type="submit"]:hover
+{
+    cursor: pointer;
+    color: #04285b;
+    background: #fff
+}
+.rightdiv .sinupform .singin{
+    margin-left: 50px;
+    text-align: right;
+    color: #fff;
+}
+.rightdiv .sinupform .singin:hover{
+    text-decoration: none;
+}
+span{
+    color: rgb(0, 0, 0);
+    transition: 0.02 ease-in-out;
+}
+
